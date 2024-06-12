@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "../components/Navbar";
 import Navbar from "../components/Navbar";
-import { kanit, taviraj } from "@/utils/font";
+import { kanit, taviraj, staatliches } from "@/utils/font";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${kanit} ${taviraj}`}>
+      <body className={`${kanit} ${taviraj} ${staatliches}`}>
         <Navbar />
         <main>{children}</main>
       </body>

@@ -21,7 +21,7 @@ const Navbar = () =>{
                     </Link>
                 </div>
                 <div className="justify-between items-center   w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul className=" flex font-medium  px-56 py-4">
+                    <ul className=" flex font-medium  px-56 py-2">
                         <li onClick={()=>setMenu("Artist")} className={menu === "Artist" ? "text-gray-500" : " text-gray-100"}>
                            <button className="px-5 py-3 hover:text-slate-500  rounded-lg ">
                             <Link href="/Aritist" className="inline-block">
