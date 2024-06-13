@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         kanit: ["var(--font-kanit)"],
         taviraj: ["var(--font-taviraj)"],
-        staatliches: ["var(font-staatliches)"],
+        staatliches: ["var(--font-staatliches)"],
       },
     },
   },

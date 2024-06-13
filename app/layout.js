@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "../components/Navbar";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 import { kanit, taviraj, staatliches } from "@/utils/font";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${kanit} ${taviraj} ${staatliches}`}>
         <Navbar />
-        <main>{children}</main>
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow">{children}</main>
+        </div>
       </body>
     </html>
   );
