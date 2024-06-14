@@ -2,13 +2,13 @@
 import Link from "next/link";
 import React ,{ useState } from "react"
 import Image from "next/image";
-import Logo from "../public/trinity.jpg"
+import Logo from "../public/images/trinity.jpg"
 const Navbar = () =>{
   const [menu, setMenu] = useState("Home")
 
     return(
         <>
-            <nav className="flex w-lg p-3 bg-black items-center justify-between border-none mx-auto shadow-sm container">
+            <nav className="flex w-full p-3 bg-black items-center justify-between border-none mx-auto shadow-sm container">
                 <div className="py-4  justify-center items-center ">
                     <Link href="/" onClick={()=>setMenu("Home")} className={menu === "Home" ? "active": ""}>
                         <Image
