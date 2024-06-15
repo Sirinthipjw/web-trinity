@@ -7,8 +7,6 @@ import React ,{ useState ,useContext} from "react";
 import Link from "next/link";
 import Carousel from "@/components/Carousel";
 
-
-
 const Artist =()=>{
   const [artist,setArtist] = useState()
   const images = [
@@ -17,9 +15,6 @@ const Artist =()=>{
     { src: '/images/trinity03.png', alt: 'Image 3' },
     { src: '/images/trinity04.png', alt: 'Image 4' },
   ];
-  
-   
-  
     return(
       <>
         <div className="flex  items-center justify-center mt-4">
@@ -32,7 +27,6 @@ const Artist =()=>{
         <Carousel images={images} />
         </div>
 
-
         <div className="flex static items-center justify-center m-10 space-x-10 ">
           <div className="bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-1/5 h-96 ">
             <div className="flex flex-col justify-center items-center">
@@ -42,7 +36,6 @@ const Artist =()=>{
               width="auto"
               height="250"
               priority
-              
             />
             </div>
             <div className="pt-2 text-center font-staatliches text-slate-950">
@@ -59,48 +52,42 @@ const Artist =()=>{
               </li>
             </div>
               
-            
-            
-           
-
           </div>
           <div className="bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-1/5 h-96 ">
-          <div className="flex flex-col justify-center items-center">
-              <Image
-              src={third}
-              alt = "third"
-              width="auto"
-              height="250"
-              priority
-              
-            />
-            </div>
-            <div className="pt-2 text-center font-staatliches text-slate-950">
-               <p className=" text-2xl">Third</p>
-               <p className="text-xl">Lapat Ngamchaweng </p>
-            </div>
-            <div className="flex flex-col justify-center items-center font-staatliches text-slate-100">
-              <li onClick={()=>setArtist("Third")} className={artist === "Third" ? "active": ""}>
-                <Link href="/Artist/Third">
-                  <button className="rounded bg-gradient-to-r from-yellow-500 to-blue-500 py-2 px-4">
-                    ข้อมูลเพิ่มเติม
-                  </button>
-                </Link>
-              </li>
-            </div>
-
+            <div className="flex flex-col justify-center items-center">
+                <Image
+                  src={third}
+                  alt = "third"
+                  width="auto"
+                  height="250"
+                  priority 
+                />
+              </div>
+              <div className="pt-2 text-center font-staatliches text-slate-950">
+                <p className=" text-2xl">Third</p>
+                <p className="text-xl">Lapat Ngamchaweng </p>
+              </div>
+              <div className="flex flex-col justify-center items-center font-staatliches text-slate-100">
+                <li onClick={()=>setArtist("Third")} className={artist === "Third" ? "active": ""}>
+                  <Link href="/Artist/Third">
+                    <button className="rounded bg-gradient-to-r from-yellow-500 to-blue-500 py-2 px-4">
+                      ข้อมูลเพิ่มเติม
+                    </button>
+                  </Link>
+                </li>
+              </div>
           </div>
 
           <div className="bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-1/5 h-96  ">
-          <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center">
               <Image
-              src={jackie}
-              alt = "jackie"
-              width="auto"
-              height="250"
-              priority
+                src={jackie}
+                alt = "jackie"
+                width="auto"
+                height="250"
+                priority
               
-            />
+              />
             </div>
             <div className="pt-2 text-center font-staatliches text-slate-950">
                <p className=" text-2xl">Jackie</p>
@@ -115,17 +102,9 @@ const Artist =()=>{
                 </Link>
               </li>
             </div>
-
-
           </div>
         </div>
-
-       
-        
       </>
     )
 }
 export default Artist;
-{/* <span class="text-5xl bg-clip-text text-center text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
-              Artist
-            </span> */}
