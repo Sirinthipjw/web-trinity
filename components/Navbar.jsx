@@ -30,7 +30,7 @@ const Navbar = () =>{
                         <li 
                             onClick={()=>setMenu("MusicalWorks")} 
                             className={`px-5 py-3 hover:text-slate-500 rounded-lg ${menu === "MusicalWorks" ? "text-gray-500" : " text-gray-100"}`}>
-                            <Link href="/MusicalWorks">Music</Link>
+                            <Link href="/MusicalWorks/Musical">Music</Link>
                         </li>
                     </ul>
                 </div>
