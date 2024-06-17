@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image"
+import trinity09 from "../../../public/images/trinity09.png"
 import trinity11 from "../../../public/images/trinity11.png"
 import Navbar01 from "../../../components/Navbar01"
 import Link from "next/link"
@@ -7,7 +8,7 @@ import React,{ useState } from "react"
 import { SiSpotify, SiYoutube, SiYoutubemusic, SiApplemusic  } from "react-icons/si";
 const Music =()=>{
     const [song,setSong] = useState()
-    const [lisent, setLisent] = useState()
+    
     return(
         <>
             <div className="flex  items-center justify-center mt-4">
@@ -332,7 +333,7 @@ const Music =()=>{
                                         </div>
                                     </div>
                                     <div className="items-center justify-between">
-                                        <div className="shadow-lg border border-lg rounded-lg border-slate-400 w-11/12 h-14 bg-gray-800 items-start justify-start ">
+                                        <div className="flex static shadow-lg border border-lg rounded-lg border-slate-400 w-11/12 h-14 bg-gray-800 items-start justify-start ">
                                             <ul className=" flex font-sm   font-kanit">
                                                 <li 
                                                     onClick={()=>setSong("My Princess")}
