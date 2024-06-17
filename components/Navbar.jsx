@@ -22,7 +22,7 @@ const Navbar = () =>{
                 </div>
                 <div className="justify-between items-center   w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul className=" flex font-medium   py-2 text-slate-100">
-                    <li 
+                        <li 
                             onClick={()=>setMenu("Artist")} 
                             className={`px-5 py-3 hover:text-slate-500 rounded-lg ${menu === "Artist" ? "text-gray-500" : " text-gray-100"}`}>
                             <Link href="/Artist">Artist</Link>
@@ -31,6 +31,11 @@ const Navbar = () =>{
                             onClick={()=>setMenu("MusicalWorks")} 
                             className={`px-5 py-3 hover:text-slate-500 rounded-lg ${menu === "MusicalWorks" ? "text-gray-500" : " text-gray-100"}`}>
                             <Link href="/MusicalWorks/Musical">Music</Link>
+                        </li>
+                        <li 
+                            onClick={()=>setMenu("About")} 
+                            className={`px-5 py-3 hover:text-slate-500 rounded-lg ${menu === "About" ? "text-gray-500" : " text-gray-100"}`}>
+                            <Link href="/About">About</Link>
                         </li>
                     </ul>
                 </div>
