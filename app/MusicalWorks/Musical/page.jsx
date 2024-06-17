@@ -4,8 +4,10 @@ import trinity11 from "../../../public/images/trinity11.png"
 import Navbar01 from "../../../components/Navbar01"
 import Link from "next/link"
 import React,{ useState } from "react"
+import { SiSpotify, SiYoutube, SiYoutubemusic, SiApplemusic  } from "react-icons/si";
 const Music =()=>{
     const [song,setSong] = useState()
+    const [lisent, setLisent] = useState()
     return(
         <>
             <div className="flex  items-center justify-center mt-4">
@@ -23,7 +25,7 @@ const Music =()=>{
                     </div>    
                     <div className="py-10 px-16">
                             <div className="flex container items-start justify-start">
-                                <div className="shadow-xl  border border-lg rounded-lg border-slate-400 w-full h-96 bg-gray-800">
+                                <div className="shadow-xl    rounded-lg  w-full h-96 bg-gray-800">
                                     <Image
                                         src={trinity11}
                                         alt="trinity11"
@@ -33,23 +35,71 @@ const Music =()=>{
                                     />
                                     <div className="px-5">
                                         <div className=" w-full border-b border-gray-500">
-                                            <div className="font-sm text-white font-kanit pt-4">
+                                            <div className="font-thin text-white font-kanit pt-4">
                                                 <p className="">ฟังเพลง</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="px-5">
-                                        <div className=" w-full border border-gray-500">
-                                            <div className="font-sm text-white font-kanit pt-4">
-                                                <p className="">ฟังเพลง</p>
+                                    <div className="px-5 py-3 flex static items-center justify-between ">
+                                        <div className=" h-20 w-10  items-center justify-between  ">  
+                                            <div className=" h-10 w-10 border border-gray-500 rounded-full  ">
+                                                <div className="items-center justify-between px-2 py-2">
+                                                    <Link href="https://open.spotify.com/artist/70iyLnJ4uH2zMmLLdGM9oM?si=CHfG4dRyS2qANcwEcC30-A">
+                                                        <SiSpotify className="h-6 w-6 text-green-700 "/>
+                                                    </Link>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                            <p className=" font-kanit pt-1 text-white font-thin text-xs text-center">
+                                                Spotify
+                                            </p>
 
-                                   
-                                    
-                                </div> 
-                            
+                                        </div>
+
+                                        <div className=" h-20 w-10  items-center justify-between ">  
+                                                <div className=" h-10 w-10 border border-gray-500 rounded-full ">
+                                                    <div className="items-center justify-between px-2 py-2">
+                                                        <Link href="https://www.youtube.com/@TRINITYTNTOFFICIAL/featured">
+                                                            <SiYoutube className="h-6 w-6 text-red-700  "/>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <p className=" font-kanit pt-1 text-white font-light text-xs text-center">
+                                                    Youtube
+                                                </p>
+                                        </div>
+
+                                        <div className="h-20 w-10 items-center justify-between  ">  
+                                            <div className="  h-10 w-10 border border-gray-500 rounded-full justify-between   ">                                                    
+                                                <div className="items-center justify-between px-2 py-2">
+                                                    <Link href="https://music.youtube.com/channel/UCvrnoA4U_bQEmOUlAKl3Rdw?si=LzTwmJ156y3CdKnU">
+                                                        <SiYoutubemusic className="h-6 w-6 text-red-700"/>
+                                                    </Link>      
+                                                </div>
+                                            </div>
+                                            <p className=" font-kanit pt-1 text-white font-light text-xs text-center ">
+                                                Youtube
+                                                music
+                                            </p>
+                                        </div>
+
+                                        <div className=" h-20 w-10  items-center justify-between ">  
+                                            <div className=" h-10 w-10 border border-gray-500 rounded-full">
+                                                <div className="px-2 py-2 items-center justify-center">
+                                                    <div className="items-center justify-center">
+                                                        <Link href="https://music.apple.com/th/artist/trinity/1340102246">
+                                                            <SiApplemusic className="h-6 w-6 text-rose-500 "/>
+                                                        </Link>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                            <p className=" font-kanit pt-1 text-white font-light text-xs text-center">
+                                                Apple
+                                                music
+                                            </p>
+                                        </div>
+                                    </div>  
+                                </div>
+
                                 <div className="px-10">
                                     <div className="items-center justify-between ">
                                         <div className="shadow-lg border border-lg rounded-lg border-slate-400 w-11/12 h-14 bg-gray-800 items-center justify-between">
@@ -59,8 +109,8 @@ const Music =()=>{
                                                     className={`rounded-lg w-80 h-14 py-1 ${song === "HiddenTrack" ? "hover:bg-gray-600 " : "hover:bg-gray-600 " }`}>
                                                     <Link href="https://youtu.be/AbEjhYLarSc?si=luYgQKCQArOAK13k">
                                                         <div className="px-5 ">
-                                                            <p className="text-slate-100 font-sm ">Hidden Track</p>
-                                                            <p className="text-slate-300 text-sm font-xs">THE 1ST MINI ALBUM: “THE ELEMENTS”</p>
+                                                            <p className="text-slate-100">Hidden Track</p>
+                                                            <p className="text-slate-300 text-sm">THE 1ST MINI ALBUM: “THE ELEMENTS”</p>
                                                         </div>
                                                     </Link>
                                                 </li>
@@ -69,14 +119,14 @@ const Music =()=>{
                                     </div>
                                     <div className="items-center justify-between py-5">
                                         <div className="shadow-lg border border-lg rounded-lg border-slate-400 w-11/12 h-14 bg-gray-800 items-center justify-between">
-                                            <ul className=" flex font-sm   font-kanit">
+                                            <ul className=" flex   font-kanit">
                                                 <li 
                                                     onClick={()=>setSong("Haters Got Nothing")}
                                                     className={`rounded-lg w-80 h-14 py-1 ${song === "Haters Got Nothing" ? "hover:bg-gray-600 " : "hover:bg-gray-600 " }`}>
                                                     <Link href="https://youtu.be/Cgt74TruI2c?si=jf6MpojGRqoMcnpE">
                                                         <div className="px-5 ">
-                                                            <p className="text-slate-100 font-sm ">Haters Got Nothing</p>
-                                                            <p className="text-slate-300 text-sm font-xs">THE 1ST MINI ALBUM: “THE ELEMENTS”</p>
+                                                            <p className="text-slate-100  ">Haters Got Nothing</p>
+                                                            <p className="text-slate-300 text-sm ">THE 1ST MINI ALBUM: “THE ELEMENTS”</p>
                                                         </div>
                                                     </Link>
                                                 </li>
@@ -130,8 +180,7 @@ const Music =()=>{
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
-                                    
+                                    </div>  
                                 </div>
                                 <div>
                                     <div className="items-center justify-between">
@@ -298,37 +347,13 @@ const Music =()=>{
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                
+                                </div>  
                             </div>
-
-                            
-                        </div>
-
-                            
-
-
-
-
-
-
-                            
-                </div>
-                    
-
-
-                
+                        </div>        
+                    </div>
             </div>
             
         </>
-
-
-
     )
-
-
-
-
-
 }
 export default Music
