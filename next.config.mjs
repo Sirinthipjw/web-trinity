@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "export",
   useFileSystemPublicRoutes: false,
+  distDir: "build",
 };
 
 export default nextConfig;
